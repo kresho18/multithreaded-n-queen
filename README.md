@@ -23,8 +23,14 @@ processes. The worker processes are waiting for the server process to assign whi
 that each process gets the rows which they should compute and construct the worker object which calls the solution function for the computation. After the
 workers finish we can gather data and show solutions on graphics.
 
+### One of the possible solutions
+
 ![Solution example](https://github.com/kresho18/multithreaded-n-queen/blob/master/solution-example.png "Solution example")
 
-### Results
+## Results
 
 For each parameter, the program was executed three times and the average time was taken for the graph. Measurement began from 8 queens at the time placed on the board until we reached the 10-minute mark as explained in the guide- lines. In our case, that number was 17 queens at the time.
+
+## Technical remarks
+
+To run the distributed part you need to install the mpj express library available [here](http://www.mpjexpress.org/download.php). It is launched with 1.8 JRE and made to work for np -4 processes.
